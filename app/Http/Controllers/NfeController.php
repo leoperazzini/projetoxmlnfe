@@ -41,9 +41,7 @@ class NfeController extends Controller
 
 			      $dados[$i]['valor_nfe'] = $valor;
 	   
-				 }
-
-dd($dados);
+				 } 
 
 				 return view('home', ['dados' => $dados] );
 		    }
