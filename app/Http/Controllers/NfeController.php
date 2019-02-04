@@ -9,8 +9,12 @@ class NfeController extends Controller
     // 
     public function home(request $request){ 
     	if(empty($request->all())){
+    		//dd(phpinfo());
     		return view('home');
     	}
+
+
+    	//dd($request->all());
  		
  		try{
 		 // Define o valor default para a variável que contém o nome da imagem 
