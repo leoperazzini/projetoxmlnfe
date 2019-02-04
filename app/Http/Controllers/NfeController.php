@@ -43,6 +43,7 @@ class NfeController extends Controller
 	   
 				 }
 
+dd($dados);
 
 				 return view('home', ['dados' => $dados] );
 		    }

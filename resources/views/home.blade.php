@@ -21,7 +21,7 @@
 	   <input name="upload[]" type="file" multiple="multiple" />
 
 	    <br><br>
-	    <button type="submit">Enviar</button>
+	    <button type="submit">Enviar teste</button>
 	</form>
 
 </div> 
