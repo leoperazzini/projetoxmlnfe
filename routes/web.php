@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'NfeController@home');
+Route::get('/', 'NfeController@envioxml');
 
-Route::get('/nfe/home/', 'NfeController@home');
+Route::get('/nfe/envioxml/', 'NfeController@envioxml');
 
-Route::post('/nfe/home/', 'NfeController@home');
+Route::post('/nfe/envioxml/', 'NfeController@envioxml');

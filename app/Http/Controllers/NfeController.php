@@ -7,13 +7,12 @@ use Illuminate\Http\Request;
 class NfeController extends Controller
 {
     // 
-    public function home(request $request){ 
+    public function envioxml(request $request){ 
     	if(empty($request->all())){
     		//dd(phpinfo());
-    		return view('home');
+    		return view('/nfe/envioxml');
     	}
-
-
+ 
     	//dd($request->all());
  		
  		try{
@@ -21,7 +20,7 @@ class NfeController extends Controller
 		    $files = $request->file('upload');
 
 		    if(empty($files)){
-		    	return view('home', ['mensagem'=> 'Nenhum arquivo selecionado!'] );
+		    	return view('/nfe/envioxml', ['mensagem'=> 'Nenhum arquivo selecionado!'] );
 		    }else{
 		    	 $total = count($_FILES['upload']['name']); 
 
@@ -43,11 +42,11 @@ class NfeController extends Controller
 	   
 				 } 
 
-				 return view('home', ['dados' => $dados] );
+				 return view('/nfe/envioxml', ['dados' => $dados , 'mensagem_sucesso' => 'Total de '.$total.' arquivos lidos com sucesso!'] );
 		    }
  		}catch(Exception $e){
 
-	    	return redirect('/nfe/home/')->with(['mensagem' => $e->getMessage()]); 
+	    	return redirect('/nfe/envioxml')->with(['mensagem_erro' => $e->getMessage()]); 
 	    }
 
     }
